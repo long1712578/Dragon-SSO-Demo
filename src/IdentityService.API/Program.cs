@@ -1,4 +1,4 @@
-using IdentityService.API;
+﻿using IdentityService.API;
 using Serilog;
 using Serilog.Events;
 
@@ -23,6 +23,12 @@ try
     await builder.AddApplicationAsync<IdentityServiceModule>();
     var app = builder.Build();
     await app.InitializeApplicationAsync();
+
+    // Seed data on first run
+    Log.Information("Seeding database...");
+    await app.Services.SeedDataAsync();
+    Log.Information("Database seeded successfully");
+
     await app.RunAsync();
 }
 catch (Exception ex)
