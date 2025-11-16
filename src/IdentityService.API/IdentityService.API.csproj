@@ -29,5 +29,6 @@
   <ItemGroup>
     <ProjectReference Include="..\IdentityService.EntityFrameworkCore\IdentityService.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\IdentityService.Application\IdentityService.Application.csproj" />
+    <ProjectReference Include="..\IdentityService.HttpApi\IdentityService.HttpApi.csproj" />
   </ItemGroup>
 </Project>

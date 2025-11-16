@@ -1,5 +1,6 @@
 ﻿using IdentityService.Application;
 using IdentityService.EntityFrameworkCore;
+using IdentityService.HttpApi;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.OpenApi.Models;
@@ -26,6 +27,7 @@ namespace IdentityService.API;
     typeof(AbpAspNetCoreSerilogModule),
     typeof(AbpSwashbuckleModule),
     typeof(IdentityServiceApplicationModule),
+    typeof(IdentityServiceHttpApiModule),
     typeof(AbpIdentityHttpApiModule),
     typeof(IdentityServiceEntityFrameworkCoreModule),
     typeof(AbpAccountApplicationModule),

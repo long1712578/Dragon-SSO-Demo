@@ -5,15 +5,15 @@ using Volo.Abp.AspNetCore.Mvc;
 
 namespace IdentityService.HttpApi.Controllers;
 
-[Route("api/account")]
+[Route("api/public-account")]
 [ApiController]
-public class AccountController : AbpControllerBase
+public class PublicAccountController : AbpControllerBase
 {
-private readonly IAccountAppService _accountAppService;
+    private readonly IAccountAppService _accountAppService;
 
-  public AccountController(IAccountAppService accountAppService)
+    public PublicAccountController(IAccountAppService accountAppService)
     {
-  _accountAppService = accountAppService;
+        _accountAppService = accountAppService;
     }
 
     [HttpPost("register")]
