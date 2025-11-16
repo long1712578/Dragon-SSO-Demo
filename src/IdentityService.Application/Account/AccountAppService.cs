@@ -1,0 +1,93 @@
+using IdentityService.Application.Contracts.Account;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Logging;
+using Volo.Abp;
+using Volo.Abp.Application.Services;
+using Volo.Abp.Identity;
+
+namespace IdentityService.Application.Account;
+
+[RemoteService(IsEnabled = false)] // Disable auto API, we'll create custom controller
+public class AccountAppService : ApplicationService, IAccountAppService
+{
+    private readonly IdentityUserManager _userManager;
+    private readonly IIdentityRoleRepository _roleRepository;
+
+    public AccountAppService(
+        IdentityUserManager userManager,
+     IIdentityRoleRepository roleRepository)
+ {
+        _userManager = userManager;
+        _roleRepository = roleRepository;
+    }
+
+    public async Task<RegisterResultDto> RegisterAsync(RegisterDto input)
+  {
+        try
+        {
+            // Check if user already exists
+          var existingUser = await _userManager.FindByNameAsync(input.UserName);
+          if (existingUser != null)
+          {
+              return new RegisterResultDto
+                    {
+                        Success = false,
+                        Message = "Username already exists"
+                    };
+      }
+
+        // Check if email already exists
+    var existingEmail = await _userManager.FindByEmailAsync(input.Email);
+    if (existingEmail != null)
+    {
+        return new RegisterResultDto
+                {
+                    Success = false,
+                    Message = "Email already exists"
+                };
+    }
+
+       // Create new user
+     var user = new IdentityUser(
+     GuidGenerator.Create(),
+     input.UserName,
+     input.Email,
+     CurrentTenant.Id);
+
+       var result = await _userManager.CreateAsync(user, input.Password);
+     
+            if (!result.Succeeded)
+            {
+    var errors = string.Join(", ", result.Errors.Select(e => e.Description));
+         return new RegisterResultDto
+      {
+        Success = false,
+            Message = $"Failed to create user: {errors}"
+     };
+     }
+
+          // Add default role (employee)
+            var employeeRole = await _roleRepository.FindByNormalizedNameAsync("EMPLOYEE");
+      if (employeeRole != null)
+            {
+await _userManager.AddToRoleAsync(user, "employee");
+  }
+
+            return new RegisterResultDto
+     {
+          Success = true,
+      Message = "User registered successfully",
+       UserId = user.Id.ToString()
+    };
+        }
+        catch (Exception ex)
+      {
+         Logger.LogError(ex, "Error during user registration");
+          return new RegisterResultDto
+        {
+      Success = false,
+          Message = $"An error occurred: {ex.Message}"
+     };
+        }
+  }
+}
