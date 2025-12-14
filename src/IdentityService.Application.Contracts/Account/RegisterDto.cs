@@ -9,7 +9,7 @@ public class RegisterDto
     public string UserName { get; set; } = string.Empty;
 
     [Required]
-  [EmailAddress]
+    [EmailAddress]
     [StringLength(256)]
     public string Email { get; set; } = string.Empty;
 
@@ -22,4 +22,15 @@ public class RegisterDto
     [Compare(nameof(Password))]
     [DataType(DataType.Password)]
     public string ConfirmPassword { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Device identifier for tracking and 2FA
+    /// </summary>
+    [StringLength(256)]
+    public string? DeviceId { get; set; }
+
+    /// <summary>
+    /// Enable two-factor authentication for this user
+    /// </summary>
+    public bool EnableTwoFactor { get; set; } = false;
 }

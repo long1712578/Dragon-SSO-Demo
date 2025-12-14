@@ -22,72 +22,129 @@ public class AccountAppService : ApplicationService, IAccountAppService
     }
 
     public async Task<RegisterResultDto> RegisterAsync(RegisterDto input)
-  {
+    {
         try
         {
             // Check if user already exists
-          var existingUser = await _userManager.FindByNameAsync(input.UserName);
-          if (existingUser != null)
-          {
-              return new RegisterResultDto
-                    {
-                        Success = false,
-                        Message = "Username already exists"
-                    };
-      }
+            var existingUser = await _userManager.FindByNameAsync(input.UserName);
+            if (existingUser != null)
+            {
+                return new RegisterResultDto
+                {
+                    Success = false,
+                    Message = "Username already exists"
+                };
+            }
 
-        // Check if email already exists
-    var existingEmail = await _userManager.FindByEmailAsync(input.Email);
-    if (existingEmail != null)
-    {
-        return new RegisterResultDto
+            // Check if email already exists
+            var existingEmail = await _userManager.FindByEmailAsync(input.Email);
+            if (existingEmail != null)
+            {
+                return new RegisterResultDto
                 {
                     Success = false,
                     Message = "Email already exists"
                 };
-    }
+            }
 
-       // Create new user
-     var user = new IdentityUser(
-     GuidGenerator.Create(),
-     input.UserName,
-     input.Email,
-     CurrentTenant.Id);
+            // Create new user
+            var user = new IdentityUser(
+                GuidGenerator.Create(),
+                input.UserName,
+                input.Email,
+                CurrentTenant.Id);
 
-       var result = await _userManager.CreateAsync(user, input.Password);
-     
+            // Enable 2FA if requested
+            if (input.EnableTwoFactor)
+            {
+                await _userManager.SetTwoFactorEnabledAsync(user, true);
+            }
+
+            var result = await _userManager.CreateAsync(user, input.Password);
+
             if (!result.Succeeded)
             {
-    var errors = string.Join(", ", result.Errors.Select(e => e.Description));
-         return new RegisterResultDto
-      {
-        Success = false,
-            Message = $"Failed to create user: {errors}"
-     };
-     }
+                var errors = string.Join(", ", result.Errors.Select(e => e.Description));
+                return new RegisterResultDto
+                {
+                    Success = false,
+                    Message = $"Failed to create user: {errors}"
+                };
+            }
 
-          // Add default role (employee)
+            // Add default role (employee)
             var employeeRole = await _roleRepository.FindByNormalizedNameAsync("EMPLOYEE");
-      if (employeeRole != null)
+            if (employeeRole != null)
             {
-await _userManager.AddToRoleAsync(user, "employee");
-  }
+                await _userManager.AddToRoleAsync(user, "employee");
+            }
+
+            // TODO: Store DeviceId if provided (will be implemented in Step 3)
+            if (!string.IsNullOrEmpty(input.DeviceId))
+            {
+                Logger.LogInformation("Device registration: {DeviceId} for user {UserId}",
+                    input.DeviceId, user.Id);
+            }
 
             return new RegisterResultDto
-     {
-          Success = true,
-      Message = "User registered successfully",
-       UserId = user.Id.ToString()
-    };
+            {
+                Success = true,
+                Message = "User registered successfully",
+                UserId = user.Id.ToString()
+            };
         }
         catch (Exception ex)
-      {
-         Logger.LogError(ex, "Error during user registration");
-          return new RegisterResultDto
         {
-      Success = false,
-          Message = $"An error occurred: {ex.Message}"
-     };
+            Logger.LogError(ex, "Error during user registration");
+            return new RegisterResultDto
+            {
+                Success = false,
+                Message = $"An error occurred: {ex.Message}"
+            };
         }
-  }
+    }
+
+    public async Task<UserProfileDto> GetProfileAsync()
+    {
+        // Get current user ID from claims (set by JWT authentication)
+        var userId = CurrentUser.Id;
+
+        if (!userId.HasValue)
+        {
+            throw new UnauthorizedAccessException("User is not authenticated");
+        }
+
+        var user = await _userManager.GetByIdAsync(userId.Value);
+
+        // Get user roles
+        var roles = await _userManager.GetRolesAsync(user);
+
+        // Get user claims for custom types/features
+        var claims = await _userManager.GetClaimsAsync(user);
+
+        var userTypes = claims
+            .Where(c => c.Type == "user_type")
+            .Select(c => c.Value)
+            .ToList();
+
+        var features = claims
+            .Where(c => c.Type == "feature")
+            .Select(c => c.Value)
+            .ToList();
+
+        // TODO: Get permissions from PermissionManagement (will be enhanced later)
+        var permissions = new List<string>();
+
+        return new UserProfileDto
+        {
+            UserId = user.Id,
+            UserName = user.UserName!,
+            Email = user.Email!,
+            UserTypes = userTypes,
+            Features = features,
+            Roles = roles.ToList(),
+            Permissions = permissions
+        };
+    }
 }
+
