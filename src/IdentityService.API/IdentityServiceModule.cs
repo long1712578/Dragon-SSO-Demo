@@ -53,6 +53,8 @@ public class IdentityServiceModule : AbpModule
     {
         var configuration = context.Services.GetConfiguration();
 
+        context.Services.AddHealthChecks();
+
         context.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {

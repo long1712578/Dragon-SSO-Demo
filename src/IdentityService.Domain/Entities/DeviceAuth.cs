@@ -3,9 +3,6 @@ using Volo.Abp.Domain.Entities;
 
 namespace IdentityService.Domain.Entities;
 
-/// <summary>
-/// Tracks authenticated devices and their tokens for 2FA and refresh flows
-/// </summary>
 public class DeviceAuth : Entity<Guid>
 {
     /// <summary>
