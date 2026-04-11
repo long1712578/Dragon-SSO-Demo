@@ -1,0 +1,111 @@
+name: Deploy Identity Staging
+
+on:
+  push:
+    tags:
+      - qc_v*
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  SERVICE: identity-service
+  IMAGE_NAME: identity-service
+  IMAGE: ghcr.io/long1712578/identity-service
+  GITOPS_REPO: long1712578/dragon-k8s-config
+  DOTNET_PROJECT: src/IdentityService.API/IdentityService.API.csproj
+  ENVIRONMENT: staging
+
+jobs:
+  build-and-push:
+    name: Build and Push Image (${{ github.ref_name }})
+    runs-on: ubuntu-latest
+    outputs:
+      image_tag: ${{ steps.meta.outputs.image_tag }}
+      full_image: ${{ steps.meta.outputs.full_image }}
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+
+      - name: Restore
+        run: dotnet restore "${{ env.DOTNET_PROJECT }}"
+
+      - name: Build
+        run: dotnet build "${{ env.DOTNET_PROJECT }}" --configuration Release --no-restore
+
+      - name: Generate image tag
+        id: meta
+        run: |
+          TAG="staging-${GITHUB_REF_NAME}"
+          echo "image_tag=${TAG}" >> $GITHUB_OUTPUT
+          echo "full_image=${{ env.IMAGE }}:${TAG}" >> $GITHUB_OUTPUT
+
+      - name: Docker login ghcr.io
+        shell: bash
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+
+      - name: Build image
+        run: |
+          docker build \
+            -t "${{ env.IMAGE }}:${{ steps.meta.outputs.image_tag }}" \
+            -t "${{ env.IMAGE }}:staging-latest" \
+            -f Dockerfile .
+
+      - name: Push image
+        run: |
+          docker push "${{ env.IMAGE }}:${{ steps.meta.outputs.image_tag }}"
+          docker push "${{ env.IMAGE }}:staging-latest"
+
+      - name: Cleanup local images
+        if: always()
+        run: docker image prune -f
+
+  update-k8s-manifest:
+    name: Update K8s Manifest
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone k8s-config and update manifest
+        shell: bash
+        env:
+          NEW_IMAGE: ${{ needs.build-and-push.outputs.full_image }}
+          IMAGE_TAG: ${{ needs.build-and-push.outputs.image_tag }}
+        run: |
+          TMPDIR=$(mktemp -d)
+          git clone https://x-access-token:${{ secrets.GITOPS_TOKEN }}@github.com/${{ env.GITOPS_REPO }}.git "${TMPDIR}"
+          cd "${TMPDIR}"
+
+          TARGET="deploy/staging/${{ env.SERVICE }}.yaml"
+          sed -i "s|image: ghcr.io/long1712578/${{ env.IMAGE_NAME }}:.*|image: ${NEW_IMAGE}|g" "${TARGET}"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "${TARGET}"
+
+          if git diff --staged --quiet; then
+            echo "Image khong doi - bo qua commit."
+          else
+            git commit -m "deploy(staging): ${{ env.SERVICE }} -> ${IMAGE_TAG} by ${{ github.actor }}"
+            for i in 1 2 3; do
+              git push && break || (git pull --rebase && sleep $((i * 3)))
+            done
+          fi
+
+          rm -rf "${TMPDIR}"
+
+      - name: Job Summary
+        run: |
+          {
+            echo "## Deploy Staging - ${{ env.SERVICE }}"
+            echo "| | |"
+            echo "|---|---|"
+            echo "| Image | \`${{ needs.build-and-push.outputs.full_image }}\` |"
+            echo "| Triggered | \`${{ github.actor }}\` |"
+          } >> "$GITHUB_STEP_SUMMARY"
