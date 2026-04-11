@@ -1,0 +1,511 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\Dragon-SSO-Demo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{22222222-2222-2222-2222-222222222222}|src\\IdentityService.Application\\IdentityService.Application.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.application\\account\\accountappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22222222-2222-2222-2222-222222222222}|src\\IdentityService.Application\\IdentityService.Application.csproj|solutionrelative:src\\identityservice.application\\account\\accountappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33333333-3333-3333-3333-333333333333}|src\\IdentityService.Application.Contracts\\IdentityService.Application.Contracts.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.application.contracts\\account\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33333333-3333-3333-3333-333333333333}|src\\IdentityService.Application.Contracts\\IdentityService.Application.Contracts.csproj|solutionrelative:src\\identityservice.application.contracts\\account\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77777777-7777-7777-7777-777777777777}|src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.httpapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77777777-7777-7777-7777-777777777777}|src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj|solutionrelative:src\\identityservice.httpapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77777777-7777-7777-7777-777777777777}|src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.httpapi\\identityservicehttpapimodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77777777-7777-7777-7777-777777777777}|src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj|solutionrelative:src\\identityservice.httpapi\\identityservicehttpapimodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|src\\IdentityService.API\\IdentityService.API.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.api\\identityservicemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|src\\IdentityService.API\\IdentityService.API.csproj|solutionrelative:src\\identityservice.api\\identityservicemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|src\\IdentityService.API\\IdentityService.API.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.api\\seeddataextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|src\\IdentityService.API\\IdentityService.API.csproj|solutionrelative:src\\identityservice.api\\seeddataextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\IdentityService.EntityFrameworkCore\\IdentityService.EntityFrameworkCore.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.entityframeworkcore\\migrations\\identityservicedbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\IdentityService.EntityFrameworkCore\\IdentityService.EntityFrameworkCore.csproj|solutionrelative:src\\identityservice.entityframeworkcore\\migrations\\identityservicedbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\IdentityService.EntityFrameworkCore\\IdentityService.EntityFrameworkCore.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.entityframeworkcore\\migrations\\20251214085233_adddeviceauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\IdentityService.EntityFrameworkCore\\IdentityService.EntityFrameworkCore.csproj|solutionrelative:src\\identityservice.entityframeworkcore\\migrations\\20251214085233_adddeviceauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\IdentityService.EntityFrameworkCore\\IdentityService.EntityFrameworkCore.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.entityframeworkcore\\identityservicedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\IdentityService.EntityFrameworkCore\\IdentityService.EntityFrameworkCore.csproj|solutionrelative:src\\identityservice.entityframeworkcore\\identityservicedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|src\\IdentityService.Domain\\IdentityService.Domain.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.domain\\entities\\deviceauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|src\\IdentityService.Domain\\IdentityService.Domain.csproj|solutionrelative:src\\identityservice.domain\\entities\\deviceauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\IdentityService.EntityFrameworkCore\\IdentityService.EntityFrameworkCore.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.entityframeworkcore\\repositories\\deviceauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\IdentityService.EntityFrameworkCore\\IdentityService.EntityFrameworkCore.csproj|solutionrelative:src\\identityservice.entityframeworkcore\\repositories\\deviceauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|src\\IdentityService.Domain\\IdentityService.Domain.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.domain\\repositories\\ideviceauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|src\\IdentityService.Domain\\IdentityService.Domain.csproj|solutionrelative:src\\identityservice.domain\\repositories\\ideviceauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33333333-3333-3333-3333-333333333333}|src\\IdentityService.Application.Contracts\\IdentityService.Application.Contracts.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.application.contracts\\account\\iaccountappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33333333-3333-3333-3333-333333333333}|src\\IdentityService.Application.Contracts\\IdentityService.Application.Contracts.csproj|solutionrelative:src\\identityservice.application.contracts\\account\\iaccountappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33333333-3333-3333-3333-333333333333}|src\\IdentityService.Application.Contracts\\IdentityService.Application.Contracts.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.application.contracts\\account\\userprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33333333-3333-3333-3333-333333333333}|src\\IdentityService.Application.Contracts\\IdentityService.Application.Contracts.csproj|solutionrelative:src\\identityservice.application.contracts\\account\\userprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77777777-7777-7777-7777-777777777777}|src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.httpapi\\identityservice.httpapi.csproj||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{77777777-7777-7777-7777-777777777777}|src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj|solutionrelative:src\\identityservice.httpapi\\identityservice.httpapi.csproj||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|src\\IdentityService.API\\IdentityService.API.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|src\\IdentityService.API\\IdentityService.API.csproj|solutionrelative:src\\identityservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33333333-3333-3333-3333-333333333333}|src\\IdentityService.Application.Contracts\\IdentityService.Application.Contracts.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.application.contracts\\identityservice.application.contracts.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{33333333-3333-3333-3333-333333333333}|src\\IdentityService.Application.Contracts\\IdentityService.Application.Contracts.csproj|solutionrelative:src\\identityservice.application.contracts\\identityservice.application.contracts.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|src\\IdentityService.Domain\\IdentityService.Domain.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.domain\\data\\identityservicedataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|src\\IdentityService.Domain\\IdentityService.Domain.csproj|solutionrelative:src\\identityservice.domain\\data\\identityservicedataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|src\\IdentityService.Domain\\IdentityService.Domain.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.domain\\identityservicedomainmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|src\\IdentityService.Domain\\IdentityService.Domain.csproj|solutionrelative:src\\identityservice.domain\\identityservicedomainmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55555555-5555-5555-5555-555555555555}|src\\IdentityService.Domain.Shared\\IdentityService.Domain.Shared.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.domain.shared\\identityserviceconsts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55555555-5555-5555-5555-555555555555}|src\\IdentityService.Domain.Shared\\IdentityService.Domain.Shared.csproj|solutionrelative:src\\identityservice.domain.shared\\identityserviceconsts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\IdentityService.EntityFrameworkCore\\IdentityService.EntityFrameworkCore.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.entityframeworkcore\\identityserviceentityframeworkcoremodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\IdentityService.EntityFrameworkCore\\IdentityService.EntityFrameworkCore.csproj|solutionrelative:src\\identityservice.entityframeworkcore\\identityserviceentityframeworkcoremodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77777777-7777-7777-7777-777777777777}|src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.httpapi\\identityservice.httpapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{77777777-7777-7777-7777-777777777777}|src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj|solutionrelative:src\\identityservice.httpapi\\identityservice.httpapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33333333-3333-3333-3333-333333333333}|src\\IdentityService.Application.Contracts\\IdentityService.Application.Contracts.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.application.contracts\\account\\registerresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33333333-3333-3333-3333-333333333333}|src\\IdentityService.Application.Contracts\\IdentityService.Application.Contracts.csproj|solutionrelative:src\\identityservice.application.contracts\\account\\registerresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55555555-5555-5555-5555-555555555555}|src\\IdentityService.Domain.Shared\\IdentityService.Domain.Shared.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.domain.shared\\identityservice.domain.shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{55555555-5555-5555-5555-555555555555}|src\\IdentityService.Domain.Shared\\IdentityService.Domain.Shared.csproj|solutionrelative:src\\identityservice.domain.shared\\identityservice.domain.shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|src\\IdentityService.Domain\\IdentityService.Domain.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.domain\\identityservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{44444444-4444-4444-4444-444444444444}|src\\IdentityService.Domain\\IdentityService.Domain.csproj|solutionrelative:src\\identityservice.domain\\identityservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|src\\IdentityService.API\\IdentityService.API.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.api\\identityservice.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|src\\IdentityService.API\\IdentityService.API.csproj|solutionrelative:src\\identityservice.api\\identityservice.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|src\\IdentityService.API\\IdentityService.API.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|src\\IdentityService.API\\IdentityService.API.csproj|solutionrelative:src\\identityservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22222222-2222-2222-2222-222222222222}|src\\IdentityService.Application\\IdentityService.Application.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.application\\identityservice.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{22222222-2222-2222-2222-222222222222}|src\\IdentityService.Application\\IdentityService.Application.csproj|solutionrelative:src\\identityservice.application\\identityservice.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22222222-2222-2222-2222-222222222222}|src\\IdentityService.Application\\IdentityService.Application.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.application\\identityserviceapplicationmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22222222-2222-2222-2222-222222222222}|src\\IdentityService.Application\\IdentityService.Application.csproj|solutionrelative:src\\identityservice.application\\identityserviceapplicationmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|src\\IdentityService.API\\IdentityService.API.csproj|d:\\projects\\dragon-sso-demo\\src\\identityservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|src\\IdentityService.API\\IdentityService.API.csproj|solutionrelative:src\\identityservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IdentityServiceDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.EntityFrameworkCore\\Migrations\\IdentityServiceDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.EntityFrameworkCore\\Migrations\\IdentityServiceDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.EntityFrameworkCore\\Migrations\\IdentityServiceDbContextModelSnapshot.cs",
+              "RelativeToolTip": "src\\IdentityService.EntityFrameworkCore\\Migrations\\IdentityServiceDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:04:33.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountAppService.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application\\Account\\AccountAppService.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.Application\\Account\\AccountAppService.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application\\Account\\AccountAppService.cs",
+              "RelativeToolTip": "src\\IdentityService.Application\\Account\\AccountAppService.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAhwEsAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T11:34:30.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SeedDataExtensions.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.API\\SeedDataExtensions.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.API\\SeedDataExtensions.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.API\\SeedDataExtensions.cs",
+              "RelativeToolTip": "src\\IdentityService.API\\SeedDataExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T11:29:18.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IdentityServiceModule.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.API\\IdentityServiceModule.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.API\\IdentityServiceModule.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.API\\IdentityServiceModule.cs",
+              "RelativeToolTip": "src\\IdentityService.API\\IdentityServiceModule.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAuwCwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T10:22:45.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.HttpApi\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.HttpApi\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.HttpApi\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "src\\IdentityService.HttpApi\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBcAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T11:34:40.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IdentityServiceHttpApiModule.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.HttpApi\\IdentityServiceHttpApiModule.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.HttpApi\\IdentityServiceHttpApiModule.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.HttpApi\\IdentityServiceHttpApiModule.cs",
+              "RelativeToolTip": "src\\IdentityService.HttpApi\\IdentityServiceHttpApiModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:27:20.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application.Contracts\\Account\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.Application.Contracts\\Account\\RegisterDto.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application.Contracts\\Account\\RegisterDto.cs",
+              "RelativeToolTip": "src\\IdentityService.Application.Contracts\\Account\\RegisterDto.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T08:34:49.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20251214085233_AddDeviceAuth.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.EntityFrameworkCore\\Migrations\\20251214085233_AddDeviceAuth.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.EntityFrameworkCore\\Migrations\\20251214085233_AddDeviceAuth.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.EntityFrameworkCore\\Migrations\\20251214085233_AddDeviceAuth.cs",
+              "RelativeToolTip": "src\\IdentityService.EntityFrameworkCore\\Migrations\\20251214085233_AddDeviceAuth.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:04:30.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DeviceAuthRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.EntityFrameworkCore\\Repositories\\DeviceAuthRepository.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.EntityFrameworkCore\\Repositories\\DeviceAuthRepository.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.EntityFrameworkCore\\Repositories\\DeviceAuthRepository.cs",
+              "RelativeToolTip": "src\\IdentityService.EntityFrameworkCore\\Repositories\\DeviceAuthRepository.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAawCQAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T08:37:54.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IAccountAppService.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application.Contracts\\Account\\IAccountAppService.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.Application.Contracts\\Account\\IAccountAppService.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application.Contracts\\Account\\IAccountAppService.cs",
+              "RelativeToolTip": "src\\IdentityService.Application.Contracts\\Account\\IAccountAppService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T11:34:12.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IDeviceAuthRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Domain\\Repositories\\IDeviceAuthRepository.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.Domain\\Repositories\\IDeviceAuthRepository.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Domain\\Repositories\\IDeviceAuthRepository.cs",
+              "RelativeToolTip": "src\\IdentityService.Domain\\Repositories\\IDeviceAuthRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T08:37:41.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IdentityServiceDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.EntityFrameworkCore\\IdentityServiceDbContext.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.EntityFrameworkCore\\IdentityServiceDbContext.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.EntityFrameworkCore\\IdentityServiceDbContext.cs",
+              "RelativeToolTip": "src\\IdentityService.EntityFrameworkCore\\IdentityServiceDbContext.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAASwEIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:27:55.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DeviceAuth.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Domain\\Entities\\DeviceAuth.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.Domain\\Entities\\DeviceAuth.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Domain\\Entities\\DeviceAuth.cs",
+              "RelativeToolTip": "src\\IdentityService.Domain\\Entities\\DeviceAuth.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T08:37:31.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserProfileDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application.Contracts\\Account\\UserProfileDto.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.Application.Contracts\\Account\\UserProfileDto.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application.Contracts\\Account\\UserProfileDto.cs",
+              "RelativeToolTip": "src\\IdentityService.Application.Contracts\\Account\\UserProfileDto.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T08:35:13.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IdentityService.HttpApi.csproj",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj",
+              "RelativeDocumentMoniker": "src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj",
+              "RelativeToolTip": "src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-16T16:29:03.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IdentityService.Application.Contracts.csproj",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application.Contracts\\IdentityService.Application.Contracts.csproj",
+              "RelativeDocumentMoniker": "src\\IdentityService.Application.Contracts\\IdentityService.Application.Contracts.csproj",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application.Contracts\\IdentityService.Application.Contracts.csproj",
+              "RelativeToolTip": "src\\IdentityService.Application.Contracts\\IdentityService.Application.Contracts.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-16T10:13:13.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IdentityServiceDataSeeder.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Domain\\Data\\IdentityServiceDataSeeder.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.Domain\\Data\\IdentityServiceDataSeeder.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Domain\\Data\\IdentityServiceDataSeeder.cs",
+              "RelativeToolTip": "src\\IdentityService.Domain\\Data\\IdentityServiceDataSeeder.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAswDoAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T10:14:53.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IdentityServiceConsts.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Domain.Shared\\IdentityServiceConsts.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.Domain.Shared\\IdentityServiceConsts.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Domain.Shared\\IdentityServiceConsts.cs",
+              "RelativeToolTip": "src\\IdentityService.Domain.Shared\\IdentityServiceConsts.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:28:22.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.API\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\IdentityService.API\\appsettings.json",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.API\\appsettings.json",
+              "RelativeToolTip": "src\\IdentityService.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-16T10:24:08.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IdentityServiceDomainModule.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Domain\\IdentityServiceDomainModule.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.Domain\\IdentityServiceDomainModule.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Domain\\IdentityServiceDomainModule.cs",
+              "RelativeToolTip": "src\\IdentityService.Domain\\IdentityServiceDomainModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:28:25.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IdentityServiceEntityFrameworkCoreModule.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.EntityFrameworkCore\\IdentityServiceEntityFrameworkCoreModule.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.EntityFrameworkCore\\IdentityServiceEntityFrameworkCoreModule.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.EntityFrameworkCore\\IdentityServiceEntityFrameworkCoreModule.cs",
+              "RelativeToolTip": "src\\IdentityService.EntityFrameworkCore\\IdentityServiceEntityFrameworkCoreModule.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAxwBIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T16:27:33.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IdentityService.HttpApi.csproj",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj",
+              "RelativeDocumentMoniker": "src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj",
+              "RelativeToolTip": "src\\IdentityService.HttpApi\\IdentityService.HttpApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-16T15:41:16.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "RegisterResultDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application.Contracts\\Account\\RegisterResultDto.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.Application.Contracts\\Account\\RegisterResultDto.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application.Contracts\\Account\\RegisterResultDto.cs",
+              "RelativeToolTip": "src\\IdentityService.Application.Contracts\\Account\\RegisterResultDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T11:34:03.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IdentityService.API.csproj",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.API\\IdentityService.API.csproj",
+              "RelativeDocumentMoniker": "src\\IdentityService.API\\IdentityService.API.csproj",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.API\\IdentityService.API.csproj",
+              "RelativeToolTip": "src\\IdentityService.API\\IdentityService.API.csproj",
+              "ViewState": "AgIAACEAAAAAAAAAAABBwAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-16T10:12:37.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IdentityService.Domain.Shared.csproj",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Domain.Shared\\IdentityService.Domain.Shared.csproj",
+              "RelativeDocumentMoniker": "src\\IdentityService.Domain.Shared\\IdentityService.Domain.Shared.csproj",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Domain.Shared\\IdentityService.Domain.Shared.csproj",
+              "RelativeToolTip": "src\\IdentityService.Domain.Shared\\IdentityService.Domain.Shared.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-16T10:13:19.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\IdentityService.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\IdentityService.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-16T10:24:03.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IdentityService.Domain.csproj",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Domain\\IdentityService.Domain.csproj",
+              "RelativeDocumentMoniker": "src\\IdentityService.Domain\\IdentityService.Domain.csproj",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Domain\\IdentityService.Domain.csproj",
+              "RelativeToolTip": "src\\IdentityService.Domain\\IdentityService.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-16T10:12:48.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IdentityService.Application.csproj",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application\\IdentityService.Application.csproj",
+              "RelativeDocumentMoniker": "src\\IdentityService.Application\\IdentityService.Application.csproj",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application\\IdentityService.Application.csproj",
+              "RelativeToolTip": "src\\IdentityService.Application\\IdentityService.Application.csproj",
+              "ViewState": "AgIAAA0AAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-16T10:12:54.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IdentityServiceApplicationModule.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application\\IdentityServiceApplicationModule.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.Application\\IdentityServiceApplicationModule.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.Application\\IdentityServiceApplicationModule.cs",
+              "RelativeToolTip": "src\\IdentityService.Application\\IdentityServiceApplicationModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T10:28:11.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\IdentityService.API\\Program.cs",
+              "ToolTip": "D:\\Projects\\Dragon-SSO-Demo\\src\\IdentityService.API\\Program.cs",
+              "RelativeToolTip": "src\\IdentityService.API\\Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T10:39:29.373Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
