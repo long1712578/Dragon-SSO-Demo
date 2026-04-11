@@ -1,0 +1,14 @@
+using Volo.Abp.Application.Services;
+
+namespace IdentityService.Application.Contracts.Account;
+
+public interface IAccountAppService : IApplicationService
+{
+    Task<RegisterResultDto> RegisterAsync(RegisterDto input);
+    
+    /// <summary>
+    /// Get current authenticated user profile with types/features/roles
+    /// Used by backend API when X-User-Types header is missing
+    /// </summary>
+    Task<UserProfileDto> GetProfileAsync();
+}

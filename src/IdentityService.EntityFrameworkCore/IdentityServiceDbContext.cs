@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using IdentityService.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.Identity;
@@ -22,9 +23,9 @@ public class IdentityServiceDbContext : AbpDbContext<IdentityServiceDbContext>,
 {
     // Identity DbSets
     public DbSet<IdentityUser> Users { get; set; }
- public DbSet<IdentityRole> Roles { get; set; }
- public DbSet<IdentityClaimType> ClaimTypes { get; set; }
-  public DbSet<OrganizationUnit> OrganizationUnits { get; set; }
+    public DbSet<IdentityRole> Roles { get; set; }
+    public DbSet<IdentityClaimType> ClaimTypes { get; set; }
+    public DbSet<OrganizationUnit> OrganizationUnits { get; set; }
     public DbSet<IdentitySecurityLog> SecurityLogs { get; set; }
     public DbSet<IdentityLinkUser> LinkUsers { get; set; }
     public DbSet<IdentityUserDelegation> UserDelegations { get; set; }
@@ -41,6 +42,9 @@ public class IdentityServiceDbContext : AbpDbContext<IdentityServiceDbContext>,
     public DbSet<OpenIddictScope> Scopes { get; set; }
     public DbSet<OpenIddictToken> Tokens { get; set; }
 
+    // Custom DbSets
+    public DbSet<DeviceAuth> DeviceAuths { get; set; }
+
     public IdentityServiceDbContext(DbContextOptions<IdentityServiceDbContext> options)
         : base(options)
     {
@@ -52,5 +56,22 @@ public class IdentityServiceDbContext : AbpDbContext<IdentityServiceDbContext>,
         builder.ConfigureIdentity();
         builder.ConfigureOpenIddict();
         builder.ConfigurePermissionManagement();
+
+        // Configure DeviceAuth
+        builder.Entity<DeviceAuth>(b =>
+        {
+            b.ToTable("DeviceAuths");
+            b.HasKey(x => x.Id);
+            b.Property(x => x.DeviceId).IsRequired().HasMaxLength(256);
+            b.Property(x => x.UserId).IsRequired();
+            b.Property(x => x.OtpSecret).HasMaxLength(512);
+            b.Property(x => x.AuthToken).HasMaxLength(512);
+            b.Property(x => x.RefreshTokenHash).HasMaxLength(512);
+            b.Property(x => x.DeviceName).HasMaxLength(256);
+
+            b.HasIndex(x => x.DeviceId);
+            b.HasIndex(x => new { x.DeviceId, x.UserId });
+            b.HasIndex(x => x.AuthToken);
+        });
     }
 }

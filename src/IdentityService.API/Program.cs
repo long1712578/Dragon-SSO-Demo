@@ -24,6 +24,9 @@ try
     var app = builder.Build();
     await app.InitializeApplicationAsync();
 
+    app.MapHealthChecks("/health/live");
+    app.MapHealthChecks("/health/ready");
+
     // Seed data on first run
     Log.Information("Seeding database...");
     await app.Services.SeedDataAsync();
