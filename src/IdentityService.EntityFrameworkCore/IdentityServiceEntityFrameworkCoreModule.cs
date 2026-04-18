@@ -1,6 +1,7 @@
 using IdentityService.Domain;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
+using Volo.Abp.EntityFrameworkCore.Sqlite;
 using Volo.Abp.Identity.EntityFrameworkCore;
 using Volo.Abp.Modularity;
 using Volo.Abp.OpenIddict.EntityFrameworkCore;
@@ -10,7 +11,7 @@ namespace IdentityService.EntityFrameworkCore;
 
 [DependsOn(
     typeof(IdentityServiceDomainModule),
-    typeof(AbpEntityFrameworkCoreModule),
+    typeof(AbpEntityFrameworkCoreSqliteModule),
     typeof(AbpIdentityEntityFrameworkCoreModule),
     typeof(AbpOpenIddictEntityFrameworkCoreModule),
     typeof(AbpPermissionManagementEntityFrameworkCoreModule)
@@ -33,7 +34,7 @@ public class IdentityServiceEntityFrameworkCoreModule : AbpModule
         {
             options.Configure<IdentityServiceDbContext>(c =>
             {
-                c.UseSqlServer();
+                c.UseSqlite();
             });
         });
     }

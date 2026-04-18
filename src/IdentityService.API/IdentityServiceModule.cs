@@ -1,8 +1,9 @@
-﻿using IdentityService.Application;
+using IdentityService.Application;
 using IdentityService.EntityFrameworkCore;
 using IdentityService.HttpApi;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.OpenApi.Models;
 using Volo.Abp;
 using Volo.Abp.Account;
@@ -63,8 +64,16 @@ public class IdentityServiceModule : AbpModule
                 options.Audience = "IdentityService";
             });
 
-            ConfigureSwagger(context, configuration);
-            ConfigureCors(context, configuration);
+        // Cho phép reverse proxy (Traefik/Cloudflare) forward headers đúng
+        context.Services.Configure<ForwardedHeadersOptions>(options =>
+        {
+            options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+            options.KnownNetworks.Clear();
+            options.KnownProxies.Clear();
+        });
+
+        ConfigureSwagger(context, configuration);
+        ConfigureCors(context, configuration);
     }
 
     private void ConfigureSwagger(ServiceConfigurationContext context, IConfiguration configuration)
@@ -77,9 +86,9 @@ public class IdentityServiceModule : AbpModule
             },
             options =>
             {
-                options.SwaggerDoc("v1", new OpenApiInfo 
-                { 
-                    Title = "Dragon SSO - Identity Service API", 
+                options.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Dragon SSO - Identity Service API",
                     Version = "v1",
                     Description = "SSO Authentication with OpenIddict and ABP Framework 9.0.2"
                 });
@@ -112,32 +121,34 @@ public class IdentityServiceModule : AbpModule
     public override void OnApplicationInitialization(ApplicationInitializationContext context)
     {
         var app = context.GetApplicationBuilder();
-      var env = context.GetEnvironment();
+        var env = context.GetEnvironment();
+
+        app.UseForwardedHeaders();
 
         if (env.IsDevelopment())
-   {
- app.UseDeveloperExceptionPage();
-      }
+        {
+            app.UseDeveloperExceptionPage();
+        }
 
-  app.UseAbpRequestLocalization();
-   app.UseCorrelationId();
+        app.UseAbpRequestLocalization();
+        app.UseCorrelationId();
         app.UseStaticFiles();
         app.UseRouting();
         app.UseCors();
-   app.UseAuthentication();
+        app.UseAuthentication();
         app.UseAbpOpenIddictValidation();
         app.UseUnitOfWork();
         app.UseAuthorization();
         app.UseSwagger();
-   app.UseAbpSwaggerUI(c =>
-{
+        app.UseAbpSwaggerUI(c =>
+        {
             c.SwaggerEndpoint("/swagger/v1/swagger.json", "Dragon SSO API");
-  var configuration = context.ServiceProvider.GetRequiredService<IConfiguration>();
+            var configuration = context.ServiceProvider.GetRequiredService<IConfiguration>();
             c.OAuthClientId(configuration["AuthServer:SwaggerClientId"]);
-      c.OAuthScopes("IdentityService");
+            c.OAuthScopes("IdentityService");
         });
-    app.UseAuditing();
-     app.UseAbpSerilogEnrichers();
+        app.UseAuditing();
+        app.UseAbpSerilogEnrichers();
         app.UseConfiguredEndpoints();
     }
 }

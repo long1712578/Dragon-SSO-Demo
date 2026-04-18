@@ -102,7 +102,7 @@
               "target": "Package",
               "version": "[9.0.2, )"
             },
-            "Volo.Abp.EntityFrameworkCore.SqlServer": {
+            "Volo.Abp.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[9.0.2, )"
             },
@@ -507,7 +507,7 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "Volo.Abp.EntityFrameworkCore.SqlServer": {
+            "Volo.Abp.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[9.0.2, )"
             },
