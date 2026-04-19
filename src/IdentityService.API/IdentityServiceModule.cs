@@ -20,6 +20,8 @@ using Volo.Abp.OpenIddict.EntityFrameworkCore;
 using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.Swashbuckle;
 
+using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
+
 namespace IdentityService.API;
 
 [DependsOn(
@@ -33,7 +35,8 @@ namespace IdentityService.API;
     typeof(IdentityServiceEntityFrameworkCoreModule),
     typeof(AbpAccountApplicationModule),
     typeof(AbpAccountHttpApiModule),
-    typeof(AbpAccountWebOpenIddictModule)
+    typeof(AbpAccountWebOpenIddictModule),
+    typeof(AbpAspNetCoreMvcUiBasicThemeModule)
 )]
 public class IdentityServiceModule : AbpModule
 {
