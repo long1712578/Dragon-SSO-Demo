@@ -74,3 +74,6 @@ Logs/
 # Database
 *.db
 *.sqlite
+# SQLite WAL/SHM files
+*.db-shm
+*.db-wal
