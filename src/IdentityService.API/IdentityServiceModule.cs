@@ -47,6 +47,12 @@ public class IdentityServiceModule : AbpModule
                 options.UseLocalServer();
                 options.UseAspNetCore();
             });
+
+            // Tắt bắt buộc HTTPS ở tầng Server vì traffic đi qua Ocelot đã bị hạ xuống HTTP
+            builder.AddServer(options =>
+            {
+                options.UseAspNetCore().DisableTransportSecurityRequirement();
+            });
         });
     }
 
