@@ -1,4 +1,4 @@
-﻿using IdentityService.API;
+using IdentityService.API;
 using Serilog;
 using Serilog.Events;
 
@@ -22,6 +22,20 @@ try
 
     await builder.AddApplicationAsync<IdentityServiceModule>();
     var app = builder.Build();
+
+    // Fix lỗi Ocelot làm mất Host Header
+    // Ép Identity Service luôn nghĩ mình đang chạy dưới dạng App__SelfUrl (sso.longdev.store)
+    app.Use(async (context, next) =>
+    {
+        var selfUrl = builder.Configuration["App:SelfUrl"];
+        if (!string.IsNullOrEmpty(selfUrl) && Uri.TryCreate(selfUrl, UriKind.Absolute, out var uri))
+        {
+            context.Request.Scheme = uri.Scheme;
+            context.Request.Host = new HostString(uri.Authority);
+        }
+        await next();
+    });
+
     await app.InitializeApplicationAsync();
 
     app.MapHealthChecks("/health/live");
