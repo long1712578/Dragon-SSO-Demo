@@ -65,6 +65,14 @@ public class IdentityServiceModule : AbpModule
 
         context.Services.AddHealthChecks();
 
+        // Fix lỗi SQLite "database is locked" khi Login
+        // ABP ghi Security Log bằng một luồng background đồng thời với việc cập nhật token của OpenIddict
+        // SQLite không xử lý tốt ghi song song, nên ta tắt chức năng Security Log đi (không cần thiết cho Demo)
+        Configure<Volo.Abp.SecurityLog.AbpSecurityLogOptions>(options =>
+        {
+            options.IsEnabled = false;
+        });
+
         context.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
