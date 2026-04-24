@@ -146,7 +146,18 @@ public class IdentityServiceDataSeeder : IDataSeedContributor, ITransientDepende
             OpenIddictConstants.ClientTypes.Public,
             null,
             new[] { OpenIddictConstants.GrantTypes.Password, OpenIddictConstants.GrantTypes.RefreshToken },
-            new[] { "IdentityService", "OfficeService", "HRMService" }
+            new[] { "openid", "profile", "roles", "email", "IdentityService", "OfficeService", "HRMService" }
+        );
+
+        // ┌─────────────────────────────────────────────────┐
+        // │ 2.1 Dragon PayHub — Dedicated Client           │
+        // └─────────────────────────────────────────────────┘
+        await CreateClientIfNotExistsAsync(
+            "dragon-payhub",
+            OpenIddictConstants.ClientTypes.Public,
+            null,
+            new[] { OpenIddictConstants.GrantTypes.Password, OpenIddictConstants.GrantTypes.RefreshToken },
+            new[] { "openid", "profile", "roles", "email", "IdentityService" }
         );
 
         // ┌─────────────────────────────────────────────────┐
@@ -274,7 +285,25 @@ public class IdentityServiceDataSeeder : IDataSeedContributor, ITransientDepende
 
             foreach (var scope in scopes)
             {
-                descriptor.Permissions.Add($"{OpenIddictConstants.Permissions.Prefixes.Scope}{scope}");
+                if (new[] { "openid", "profile", "roles", "email", "address", "phone" }.Contains(scope))
+                {
+                    descriptor.Permissions.Add($"{OpenIddictConstants.Permissions.Prefixes.Scope}{scope}");
+                }
+                else
+                {
+                    descriptor.Permissions.Add($"{OpenIddictConstants.Permissions.Prefixes.Scope}{scope}");
+                }
+            }
+
+            // Đảm bảo các scopes chuẩn luôn được phép (Fix "specified scope not allowed")
+            var standardScopes = new[] { 
+                OpenIddictConstants.Permissions.Scopes.OpenId,
+                OpenIddictConstants.Permissions.Scopes.Profile,
+                OpenIddictConstants.Permissions.Scopes.Roles,
+                OpenIddictConstants.Permissions.Scopes.Email 
+            };
+            foreach (var s in standardScopes) {
+                if (!descriptor.Permissions.Contains(s)) descriptor.Permissions.Add(s);
             }
 
             if (redirectUris != null)
