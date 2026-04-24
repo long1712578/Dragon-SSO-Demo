@@ -297,10 +297,10 @@ public class IdentityServiceDataSeeder : IDataSeedContributor, ITransientDepende
 
             // Đảm bảo các scopes chuẩn luôn được phép (Fix "specified scope not allowed")
             var standardScopes = new[] { 
-                OpenIddictConstants.Permissions.Scopes.OpenId,
-                OpenIddictConstants.Permissions.Scopes.Profile,
-                OpenIddictConstants.Permissions.Scopes.Roles,
-                OpenIddictConstants.Permissions.Scopes.Email 
+                $"{OpenIddictConstants.Permissions.Prefixes.Scope}{OpenIddictConstants.Scopes.OpenId}",
+                $"{OpenIddictConstants.Permissions.Prefixes.Scope}{OpenIddictConstants.Scopes.Profile}",
+                $"{OpenIddictConstants.Permissions.Prefixes.Scope}{OpenIddictConstants.Scopes.Roles}",
+                $"{OpenIddictConstants.Permissions.Prefixes.Scope}{OpenIddictConstants.Scopes.Email}"
             };
             foreach (var s in standardScopes) {
                 if (!descriptor.Permissions.Contains(s)) descriptor.Permissions.Add(s);
